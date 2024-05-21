@@ -6,7 +6,7 @@ const request = require('request-promise-native');
 require('dotenv').config();
 
 const app = express();
-
+app.options('*', cors());
 app.use(express.json());
 
 app.use(cors());

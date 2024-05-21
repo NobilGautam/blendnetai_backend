@@ -9,14 +9,7 @@ const app = express();
 
 app.use(express.json());
 
-const corsOptions = {
-    origin: 'https://blendnetai-frontend.vercel.app',
-    optionsSuccessStatus: 200
-};
-
-
-
-app.use(cors(corsOptions));
+app.use(cors());
 
 const PORT = process.env.PORT || 4000;
 const MONGO_URI = process.env.REACT_MONGO_URI; // Add your MongoDB URI here

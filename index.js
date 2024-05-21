@@ -5,13 +5,17 @@ const bcrypt = require('bcryptjs');
 const request = require('request-promise-native');
 require('dotenv').config();
 
+const app = express();
+
+app.use(express.json());
+
 const corsOptions = {
     origin: 'https://blendnetai-frontend.vercel.app',
     optionsSuccessStatus: 200
 };
 
 
-const app = express();
+
 app.use(cors(corsOptions));
 
 const PORT = process.env.PORT || 4000;

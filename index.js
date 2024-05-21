@@ -13,7 +13,6 @@ const corsOptions = {
 
 const app = express();
 app.use(cors(corsOptions));
-app.use(express.json());
 
 const PORT = process.env.PORT || 4000;
 const MONGO_URI = process.env.REACT_MONGO_URI; // Add your MongoDB URI here
